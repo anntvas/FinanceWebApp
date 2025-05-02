@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  db-init:
+    env_file:
+      - production.env
+  api:
+    command: gunicorn budgetsite.wsgi -b 0.0.0.0:8000
+    env_file:
+      - production.env
