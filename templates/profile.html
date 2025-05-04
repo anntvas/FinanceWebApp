@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль</title>
+    <link rel="stylesheet" href="css/profile.css">
+    <style>
+        @font-face {
+            font-family: 'Bounded';
+            src: url('../frontend/fonts/Bounded-Variable.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Bounded Black';
+            src: url('../frontend/fonts/Bounded-Black.ttf') format('truetype');
+            font-weight: 900;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+</head>
+<body>
+    <!-- Боковая панель -->
+    <div class="sidebar-overlay"></div>
+    <aside class="sidebar">
+        <button class="sidebar-close">&times;</button>
+        <nav class="sidebar-nav">
+            <a href="profile.html" class="sidebar-link active">Профиль</a>
+            <a href="index.html" class="sidebar-link">Главная</a>
+            <a href="stats.html" class="sidebar-link">Статистика</a>
+            <a href="transactions.html" class="sidebar-link">Операции</a>
+            <a href="categories.html" class="sidebar-link">Категории</a>
+        </nav>
+    </aside>
+
+    <!-- Кнопка открытия панели -->
+    <button class="sidebar-toggle">☰</button>
+
+    <!-- Основное содержимое -->
+    <div class="main-content">
+        <div class="profile-container">
+            <div class="profile-header">
+                <img src="images/user-avatar.jpg" alt="Фото пользователя" class="profile-photo">
+                <h1 class="profile-name">Иван Иванов</h1>
+                <div class="profile-birthday">Дата рождения: 15.03.1990</div>
+            </div>
+
+            <div class="profile-section">
+                <h2 class="section-title">Личные данные</h2>
+
+                <div class="form-group">
+                    <label for="username" class="form-label">Имя пользователя</label>
+                    <input type="text" id="username" class="form-input" value="Иван Иванов">
+                </div>
+
+                <div class="form-group">
+                    <label for="birthday" class="form-label">Дата рождения</label>
+                    <input type="date" id="birthday" class="form-input" value="1990-03-15">
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-input" value="ivan@example.com">
+                </div>
+            </div>
+
+            <div class="profile-section">
+                <h2 class="section-title">Финансы</h2>
+
+                <div class="form-group">
+                    <label class="form-label">Приблизительный доход в месяц</label>
+                    <div class="income-container">
+                        <input type="number" id="income" class="form-input income-input" placeholder="Введите сумму">
+                        <select class="currency-select">
+                            <option>RUB</option>
+                            <option>USD</option>
+                            <option>EUR</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button class="save-btn">Сохранить изменения</button>
+        </div>
+    </div>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>

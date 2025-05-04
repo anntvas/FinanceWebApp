@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Такие же мета-теги как в index.html -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Вход | Finance Tracker</title>
+    <!-- Подключаем те же стили -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="images/fevicon.png" type="image/gif">
+</head>
+<body>
+    <!-- Шапка такая же как на главной -->
+    <div class="header_section header_bg">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">О проекте</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Функционал</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Основной контент страницы входа -->
+    <div class="auth_section layout_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <h1 class="auth_taital">Вход в систему</h1>
+                    <form class="auth_form">
+                        <div class="form_group">
+                            <input type="email" class="form_control" placeholder="Email" required>
+                        </div>
+                        <div class="form_group">
+                            <input type="password" class="form_control" placeholder="Пароль" required>
+                        </div>
+                        <div class="form_group">
+                            <button type="submit" class="auth_btn">Войти</button>
+                        </div>
+                        <div class="auth_links">
+                            <a href="registration.html">Нет аккаунта? Зарегистрируйтесь</a><br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Футер такой же как на главной -->
+    <div class="footer_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>© 2025 Finance Tracker. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Скрипты такие же -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
