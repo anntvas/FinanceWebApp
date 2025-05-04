@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Категории</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/categories.css">
+</head>
+<body>
+<!-- Основной контент -->
+    <div class="categories-container">
+        <button class="sidebar-toggle">☰</button>
+
+        <h1 class="categories-title">Категории</h1>
+        <button class="add-category-btn">+ Добавить категорию</button>
+
+        <div class="categories-columns">
+            <!-- Доходы -->
+            <div class="categories-column">
+                <h2 class="column-title income-title">Доходы</h2>
+                <div class="categories-list" id="income-categories">
+                    <div class="category-item" data-id="1">
+                        <span class="category-color" style="background: #4CAF50;"></span>
+                        <span class="category-name">Зарплата</span>
+                        <button class="category-delete">Удалить</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Расходы -->
+            <div class="categories-column">
+                <h2 class="column-title expense-title">Расходы</h2>
+                <div class="categories-list" id="expense-categories">
+                    <div class="category-item" data-id="2">
+                        <span class="category-color" style="background: #F44336;"></span>
+                        <span class="category-name">Продукты</span>
+                        <button class="category-delete">Удалить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Модальное окно добавления категории -->
+<div class="modal-overlay" id="category-modal">
+    <div class="modal">
+        <button class="modal-close">&times;</button>
+        <h2>Добавить категорию</h2>
+        <form id="add-category-form">
+            <div class="form-group">
+                <label for="category-type">Тип категории</label>
+                <select id="category-type" required>
+                    <option value="income">Доход</option>
+                    <option value="expense">Расход</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="category-name">Название</label>
+                <input type="text" id="category-name" required>
+            </div>
+            <div class="form-group">
+                <label for="category-color">Цвет</label>
+                <input type="color" id="category-color" value="#4CAF50">
+            </div>
+            <button type="submit" class="submit-btn">Добавить</button>
+        </form>
+    </div>
+</div>
+<!-- Боковая панель (в вашем стиле) -->
+    <div class="sidebar-overlay"></div>
+    <aside class="sidebar">
+        <button class="sidebar-close">&times;</button>
+        <nav class="sidebar-nav">
+            <a href="profile.html" class="sidebar-link">Профиль</a>
+            <a href="index.html" class="sidebar-link">Главная</a>
+            <a href="stats.html" class="sidebar-link">Статистика</a>
+            <a href="transactions.html" class="sidebar-link">Операции</a>
+            <a href="categories.html" class="sidebar-link active">Категории</a>
+        </nav>
+    </aside>
+    <script src="js/categories.js"></script>
+</body>
+</html>
