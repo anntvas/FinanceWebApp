@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Операции по категориям</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/transactions.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar-overlay"></div>
+    <aside class="sidebar">
+        <button class="sidebar-close">&times;</button>
+        <nav class="sidebar-nav">
+            <a href="profile.html" class="sidebar-link">Профиль</a>
+            <a href="index.html" class="sidebar-link">Главная</a>
+            <a href="stats.html" class="sidebar-link">Статистика</a>
+            <a href="transactions.html" class="sidebar-link active">Операции</a>
+            <a href="categories.html" class="sidebar-link">Категории</a>
+        </nav>
+    </aside>
+
+    <div class="transactions-container">
+        <button class="sidebar-toggle">☰</button>
+        <h1 class="transactions-title">Операции по категориям</h1>
+
+        <div class="transactions-columns">
+            <div class="transactions-column income-column">
+                <h2 class="column-title">Доходы</h2>
+                <div class="category-cards" id="income-categories">
+                </div>
+            </div>
+
+            <div class="transactions-column expense-column">
+                <h2 class="column-title">Расходы</h2>
+                <div class="category-cards" id="expense-categories">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/sidebar.js"></script>
+    <script src="js/transactions.js"></script>
+</body>
+</html>
+
+
