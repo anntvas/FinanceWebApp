@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Финансовый помощник</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stats.css">
+    <link rel="stylesheet" href="css/ai-chat.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="sidebar-overlay"></div>
+<aside class="sidebar">
+    <button class="sidebar-close">&times;</button>
+    <nav class="sidebar-nav">
+        <a href="profile.html" class="sidebar-link">Профиль</a>
+        <a href="index.html" class="sidebar-link">Главная</a>
+        <a href="stats.html" class="sidebar-link">Статистика</a>
+        <a href="transactions.html" class="sidebar-link">Операции</a>
+        <a href="categories.html" class="sidebar-link active">Категории</a>
+    </nav>
+</aside>
+
+<div class="stats-container">
+    <button class="sidebar-toggle">☰</button>
+    <h1 class="stats-title">Статистика</h1>
+
+    <div class="charts-container">
+        <div class="chart-wrapper">
+            <h2 class="chart-title">Доходы</h2>
+            <canvas id="income-chart"></canvas>
+            <p class="no-data" id="income-no-data">Нет данных о доходах</p>
+        </div>
+        <div class="chart-wrapper">
+            <h2 class="chart-title">Расходы</h2>
+            <canvas id="expense-chart"></canvas>
+            <p class="no-data" id="expense-no-data">Нет данных о расходах</p>
+        </div>
+    </div>
+
+    <div class="add-operation-form">
+        <h2 class="form-title">Добавить операцию</h2>
+        <form id="operation-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="operation-type">Тип операции</label>
+                    <select id="operation-type" required>
+                        <option value="income">Доход</option>
+                        <option value="expense">Расход</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="operation-category">Категория</label>
+                    <select id="operation-category" required></select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="operation-name">Название</label>
+                    <input type="text" id="operation-name" required>
+                </div>
+            </div>
+            <div class="form-row">
+    <div class="form-group">
+        <label for="operation-currency">Валюта</label>
+        <select id="operation-currency" required>
+            <option value="RUB">Рубли (RUB)</option>
+            <option value="USD">Доллары (USD)</option>
+            <option value="EUR">Евро (EUR)</option>
+            <option value="CNY">Юани (CNY)</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="operation-amount">Сумма</label>
+        <input type="number" id="operation-amount" min="0.01" step="0.01" required>
+    </div>
+</div>
+
+            <button type="submit" class="submit-btn">Добавить</button>
+        </form>
+    </div>
+
+    <div class="operations-list">
+        <h2 class="operations-title">История операций</h2>
+        <div class="operations-container">
+            <div class="operations-column">
+                <h3 class="operations-subtitle">Доходы</h3>
+                <ul id="income-operations"></ul>
+            </div>
+            <div class="operations-column">
+                <h3 class="operations-subtitle">Расходы</h3>
+                <ul id="expense-operations"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="chat-container">
+    <h1 class="chat-title">Финансовый помощник</h1>
+
+    <div class="chat-box" id="chat-messages">
+        <div class="message ai-message">
+            <div class="message-content">
+                Привет! Я ваш финансовый помощник. Задайте мне любой вопрос о бюджете, инвестициях или экономии.
+            </div>
+        </div>
+    </div>
+
+    <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Введите ваш вопрос...">
+        <button id="send-button">Отправить</button>
+    </div>
+</div>
+
+<script src="js/stats.js"></script>
+<script src="js/ai-chat.js"></script>
+
+</body>
+</html>
